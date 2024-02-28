@@ -1,0 +1,14 @@
+inputSet:
+  name: Build_umarani1218_terraform_azure_1709108754052-pr-trigger-input-set
+  identifier: Build_umarani1218_terraform_azure_1709108754052prtriggerinputset
+  orgIdentifier: default
+  projectIdentifier: default_project
+  pipeline:
+    identifier: Build_umarani1218_terraform_azure_1709108754052
+    properties:
+      ci:
+        codebase:
+          build:
+            type: PR
+            spec:
+              number: <+trigger.prNumber>
