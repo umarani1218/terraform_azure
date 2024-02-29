@@ -18,7 +18,9 @@ pipeline:
                   identifier: Echo_Welcome_Message
                   spec:
                     shell: Sh
-                    command: terraform --version
+                    command: |-
+                      terraform --version
+                      echo "welcome to terraform"
               - step:
                   type: Run
                   name: terraform_init
