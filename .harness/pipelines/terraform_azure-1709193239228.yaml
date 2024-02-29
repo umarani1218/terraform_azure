@@ -27,7 +27,7 @@ pipeline:
                   identifier: az_login
                   spec:
                     shell: Sh
-                    command: az login --user Umarani.Venkatesh@infinite.com --password Muthuuma@1218
+                    command: "az login --user Umarani.Venkatesh@infinite.com --password "
           platform:
             os: Linux
             arch: Amd64
