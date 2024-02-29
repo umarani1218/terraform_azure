@@ -41,14 +41,14 @@ pipeline:
                   identifier: terraform_plan
                   spec:
                     shell: Sh
-                    command: terraform plan
+                    command: terraform plan -var="resource_group_name=uma-epp"
               - step:
                   type: Run
                   name: terraform_apply
                   identifier: terraform_apply
                   spec:
                     shell: Sh
-                    command: terraform apply -auto-approve
+                    command: terraform apply -var="resource_group_name=uma-epp" -auto-approve
               - step:
                   type: Run
                   name: terraform_destroy
