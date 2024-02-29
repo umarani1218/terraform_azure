@@ -14,11 +14,11 @@ pipeline:
             steps:
               - step:
                   type: Run
-                  name: Echo Welcome Message
+                  name: print terraform version
                   identifier: Echo_Welcome_Message
                   spec:
-                    shell: Python
-                    command: print("HI folks ,lets get started")
+                    shell: Sh
+                    command: sh 'terraform --version'
           platform:
             os: Linux
             arch: Amd64
