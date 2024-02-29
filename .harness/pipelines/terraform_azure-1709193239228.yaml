@@ -28,6 +28,13 @@ pipeline:
                   spec:
                     shell: Sh
                     command: "terraform init "
+              - step:
+                  type: Run
+                  name: terraform_plan
+                  identifier: terraform_plan
+                  spec:
+                    shell: Sh
+                    command: terraform plan -out uma.json
           platform:
             os: Linux
             arch: Amd64
