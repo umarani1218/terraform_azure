@@ -27,9 +27,7 @@ pipeline:
                   identifier: az_login
                   spec:
                     shell: Sh
-                    command: |-
-                      set -e; cd /home/eppadmin
-                      terraform init 
+                    command: "terraform init "
           platform:
             os: Linux
             arch: Amd64
