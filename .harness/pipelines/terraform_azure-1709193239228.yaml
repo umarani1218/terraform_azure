@@ -21,27 +21,6 @@ pipeline:
                     command: |-
                       terraform --version
                       echo "welcome to terraform"
-              - step:
-                  type: Run
-                  name: terraform_init
-                  identifier: terraform_init
-                  spec:
-                    shell: Sh
-                    command: terraform init
-              - step:
-                  type: Run
-                  name: terraform_plan
-                  identifier: terraform_plan
-                  spec:
-                    shell: Sh
-                    command: "terraform plan "
-              - step:
-                  type: Run
-                  name: terraform_apply
-                  identifier: terraform_apply
-                  spec:
-                    shell: Sh
-                    command: terraform apply -auto-approve
           platform:
             os: Linux
             arch: Amd64
