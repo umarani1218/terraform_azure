@@ -28,7 +28,7 @@ pipeline:
                   spec:
                     shell: Sh
                     command: |-
-                      cd /home/eppadmin
+                      set -e; cd /home/eppadmin
                       terraform init 
           platform:
             os: Linux
