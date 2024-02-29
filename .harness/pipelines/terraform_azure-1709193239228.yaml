@@ -42,6 +42,13 @@ pipeline:
                   spec:
                     shell: Sh
                     command: terraform plan -out uma.json
+              - step:
+                  type: Run
+                  name: terraform_apply
+                  identifier: terraform_apply
+                  spec:
+                    shell: Sh
+                    command: terraform apply -auto-approve
           platform:
             os: Linux
             arch: Amd64
