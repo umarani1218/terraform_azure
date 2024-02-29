@@ -49,6 +49,13 @@ pipeline:
                   spec:
                     shell: Sh
                     command: terraform apply -var="resource_group_name=uma-eppp" -auto-approve
+              - step:
+                  type: Run
+                  name: terraform_destroy
+                  identifier: terraform_destroy
+                  spec:
+                    shell: Sh
+                    command: terraform destroy -auto-approve
           platform:
             os: Linux
             arch: Amd64
