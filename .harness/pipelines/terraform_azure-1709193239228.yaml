@@ -17,8 +17,8 @@ pipeline:
                   name: Echo Welcome Message
                   identifier: Echo_Welcome_Message
                   spec:
-                    shell: Sh
-                    command: echo "Welcome to Harness CI"
+                    shell: Python
+                    command: print("HI folks ,lets get started")
           platform:
             os: Linux
             arch: Amd64
