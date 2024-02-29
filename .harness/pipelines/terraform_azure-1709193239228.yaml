@@ -23,11 +23,11 @@ pipeline:
                       echo "welcome to terraform"
               - step:
                   type: Run
-                  name: az_login
+                  name: terraform_init
                   identifier: az_login
                   spec:
                     shell: Sh
-                    command: "az login --user Umarani.Venkatesh@infinite.com --password "
+                    command: "terraform init "
           platform:
             os: Linux
             arch: Amd64
