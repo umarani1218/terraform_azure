@@ -55,7 +55,7 @@ pipeline:
                   identifier: terraform_destroy
                   spec:
                     shell: Sh
-                    command: terraform destroy -auto-approve
+                    command: terraform destroy -var="resource_group_name=epp" -auto-approve
           platform:
             os: Linux
             arch: Amd64
