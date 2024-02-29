@@ -30,6 +30,13 @@ pipeline:
                     command: "terraform init "
               - step:
                   type: Run
+                  name: azlogin
+                  identifier: azlogin
+                  spec:
+                    shell: Sh
+                    command: az login
+              - step:
+                  type: Run
                   name: terraform_plan
                   identifier: terraform_plan
                   spec:
